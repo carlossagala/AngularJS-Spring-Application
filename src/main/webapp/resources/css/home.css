@@ -1,0 +1,33 @@
+body {
+	background: url("img/welcome.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#registro {
+	margin-left: 690px;
+	font-size: 17px;
+	color: white;
+	background: none;
+	margin-top: 220px;
+}
+
+#panel_head {
+	background-color: #4F8DEA;
+	color: white;
+	border: none;
+	font-size: 50 solid white center;
+}
+
+#panel_register {
+	background: none;
+	border: none;
+}
+
+#btn_registrarse:hover {
+	background-color:#12EB57;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
