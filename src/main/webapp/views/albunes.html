@@ -1,0 +1,19 @@
+<div ui-view="navM">
+</div>
+<div class="container-fluid" style="position:relative;margin-top:200px;">
+    <div class="jumbotron">
+        <h1>Albunes</h1>
+        <div class="row">
+            <div >
+                <div class="col-md-4" ng-repeat="albun in albunes">
+                    <div class="well" style="height:200px;width:200px;">
+                        <h2>{{albun.nombre}}</h2>
+                        <a href="#"><img src="" class="img-thumbnail" style="background:black;height:100px;width:100px;"></a>
+                        <h4>{{albun.anio}}</h4>
+                        <h4>{{albun.banda}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
