@@ -34,7 +34,7 @@ public class UsuarioController{
 			return new ResponseEntity<Boolean>(bool,HttpStatus.OK);
 		}
 		bool = false;
-		return new ResponseEntity<Boolean>(bool,HttpStatus.NOT_FOUND);
+		return new ResponseEntity<Boolean>(bool,HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/cargar-albunes/",method = RequestMethod.GET)

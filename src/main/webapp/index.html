@@ -9,9 +9,68 @@
     <script type="text/javascript" src="resources/node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="resources/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
     <link rel="stylesheet" type="text/css" href="resources/css/home.css" />
+    <style type="text/css">
+    .nav-multimed-cont {
+        position: fixed;
+        background-color: black;
+        width: 100%;
+        top: 0;
+        font-size: 20px;
+        list-style-type: none;
+        padding: 0px;
+        overflow: hidden;
+    }
+    
+    .login-multimed {
+        background-color: #4F8DEA;
+        float: right;
+    }
+    
+    .login-multimed li a {
+        text-align: center;
+        font: monospace 25px italic;
+    }
+    
+    .nav-multimed-cont li a {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .nav-multimed-cont li {
+        float: left;
+    }
+    
+    .nav-multimed-cont-hover li a:hover {
+        background-color: #4F8DEA;
+        color: black;
+    }
+    </style>
 </head>
 
 <body>
+
+<div class="nav-multimed" ng-controller="navController as navCtrl">
+    <ul class="nav-multimed-cont">
+        <div class="nav-multimed-cont-hover">
+            <li><a ng-href="#/peliculas/">Peliculas</a></li>
+            <li><a ng-href="#/albunes/">Albunes</a></li>
+            <li><a ng-href="#/series/" >Series</a></li>
+        </div>
+        <div class="login-multimed" >
+        <li ><a ng-href="#">Multimedia Online</a></li></div>
+    </ul>
+
+
+
+</div>
+
+
+
+
+
     <div ui-view></div>
     <script type="text/javascript" src="resources/js/app.js"></script>
     <script type="text/javascript" src="resources/js/routes.js"></script>

@@ -17,10 +17,10 @@ var loginController = app.controller('loginController', ['$scope', '$state', 'Lo
             LoginService.goLogin($scope.usuario).then(
 
                 function(response) {
-                    if (response) {
+                    if (response.data) {
                         $state.go('home');
                     } else {
-                        alert("no existe ese usuario");
+                       $state.go('login');
                     }
                 },
                 function(errResponse) {}
@@ -53,7 +53,7 @@ var seriesController = app.controller('seriesController', ['$scope', function($s
 
 }])
 
-var cancionesController = app.controller('albunesController', ['$scope','albunesData', function($scope,albunesData) {
+var cancionesController = app.controller('albunesController', ['$scope', 'albunesData', function($scope, albunesData) {
     $scope.albunes = albunesData.data;
 
 

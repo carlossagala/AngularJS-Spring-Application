@@ -1,0 +1,151 @@
+
+
+<style type="text/css">
+  #seguir:hover{
+  background-color:white;
+}
+
+#descripcion{
+   padding-bottom: 165px;
+ 
+}
+
+#j_titulo{
+  background-color:black;
+  color:#405eff;
+}
+
+/*escondo el input file por defecto*/
+.input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+/* ya que el label esta asignado para el input file lo modifico*/
+.input-file + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+/*efecto hover al sombrearlo*/
+
+.input-file+label:hover {
+   box-shadow: 10px 10px 12px black;
+}
+</style>
+
+<div class="container" style="background-color:#595959;">
+      <div class="jumbotron" id="j_titulo" style="height:50px;">
+      <h1 style="margin: -40px auto;">Agregar contenido</h1>
+      </div><!--cierra el jumbotron-->
+      
+      <div class="row" style="; margin-left:10px; ">
+        <div class="col-md-6">
+          
+          <div class="form-horizontal" style="font-align:center;">
+            
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="nombre del contenido">
+              </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="autor">
+              
+            </div>
+             <div class="form-group">
+              <input type="text" class="form-control" placeholder="año">
+              
+            </div>
+             <div class="form-group">
+              <input type="text" class="form-control" placeholder="descripcion" id="descripcion" style="height:200px;">
+              
+            </div>
+           
+          </div><!--form-->
+          
+          
+        </div><!--col 6-->
+        
+        <div class="col-md-5" >
+            <div class="form-horizontal" style="margin-left:30px;">
+              
+              <div class="form-group" style="font-size:18px;font-align:center;color:black; ">
+                
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" value="albun" />Albun
+                </label>
+                 <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" value="pelicula" />Pelicula
+                   <!--name="inlineRadioOptions" es requerido para solo seleccionar un radio-->
+                </label>
+                 <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" value="serie" />Serie
+                </label>
+                
+              </div>
+              
+              
+              <div class="form-group">
+                
+                 <input type="file" name="file" id="file" name="url" class="input-file"><label for="file" class="btn btn-primary" style="width:300px;height:40px;border-radius:0;background:#405eff">Seleccione una imagen</label>
+
+                  <img  id="image" class="thumbnail" onerror="errorCallback()" onload="loadCallback()" style="width:300px;height:248px;margin-top:10px;"/>
+                
+              </div>
+              
+          </div>
+          
+        </div><!--col 6-->
+        
+        
+      </div> <!--row-->
+      <div class="row" >
+        
+        <div class="btn-group "style="float:right"  role="group">
+        <button type="button" class="btn btn-danger"  style="border-radius:0;height:50px;width:100px;font-align:center;background:#ff3333;">Cancelar
+        </button>
+        <button  type="button" class="btn btn-default" aria-label="Left Align" style="height:50px;width:50px;margin-right:20px;background:black;border-radius:0;border:none;" id="seguir"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="color:#405eff;font-size:30px;width:-40px"></span> </button> 
+     
+        </div>
+        
+        </div><!--botones-->
+      
+      
+      
+    </div><!--containe-->
+    
+
+
+<script type="text/javascript">
+  
+document.getElementById('file').onchange = function (evt) {
+    var tgt = evt.target || window.event.srcElement,
+        files = tgt.files;
+
+    // FileReader support
+    if (FileReader && files && files.length) {
+        var fr = new FileReader();
+        fr.onload = function () {
+            document.getElementById("image").src = fr.result;
+        }
+        fr.readAsDataURL(files[0]);
+    }
+
+    // Not supported
+    else {
+       alert('Image did not exist');
+    }
+
+  
+ 
+
+}
+
+
+  
+</script>

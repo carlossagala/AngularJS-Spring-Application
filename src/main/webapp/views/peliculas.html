@@ -1,6 +1,61 @@
-
-	<div ui-view="navM"></div>
-<div>
-	
-	peliculas
+<style type="text/css">
+#j_titulo {
+    background-color: black;
+    color: #405eff;
+    width: 1100px;
+}
+#titulo{
+	margin-top: 75px;
+}
+</style>
+<div ui-view="navM">
 </div>
+<div class="container" style="background:none;" id="titulo">
+    <div class="jumbotron" id="j_titulo" style="height:50px;">
+        <h1 style="margin: -40px auto;">Peliculas</h1>
+    </div>
+    <!--cierra el jumbotron-->
+    <div class="row">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <a href="#">
+                    <div class="thumbnail" style="width:300px;margin-left:17px;background:black">
+                        <img src="" alt="una pelicula" style="width:150px;height:200px;margin-top:10px;">
+                        <div class="caption" style="color:white;font-size:20px;text-align:center;">
+                            <h3>Rapidos y furiosos</h3>
+                            <p>poner tags</p>
+                            <p>Descripcion </p>
+                        </div>
+                    </div>
+            </div>
+            </a>
+            <!--borrar po ng-repeat-->
+            <div class="col-sm-6 col-md-4">
+                <a href="#">
+                    <div class="thumbnail" style="width:300px;margin-left:17px;background:black">
+                        <img src="" alt="una pelicula" style="width:150px;height:200px;margin-top:10px;">
+                        <div class="caption" style="color:white;font-size:20px;text-align:center;">
+                            <h3>Muertos de risa</h3>
+                            <p>poner tags</p>
+                            <p>Descripcion </p>
+                        </div>
+                    </div>
+            </div>
+            </a>
+            <div class="col-sm-6 col-md-4">
+                <a href="#">
+                    <div class="thumbnail" style="width:300px;margin-left:17px;background:black">
+                        <img src="" alt="una pelicula" style="width:150px;height:200px;margin-top:10px;">
+                        <div class="caption" style="color:white;font-size:20px;text-align:center;">
+                            <h3>Resident evil</h3>
+                            <p>poner tags</p>
+                            <p>Descripcion </p>
+                        </div>
+                    </div>
+            </div>
+            </a>
+        </div>
+    </div>
+    <!--row-->
+</div>
+<!--containe-->

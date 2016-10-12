@@ -1,19 +1,35 @@
-<div ui-view="navM">
-</div>
-<div class="container-fluid" style="position:relative;margin-top:200px;">
-    <div class="jumbotron">
-        <h1>Albunes</h1>
+<style type="text/css">
+#j_titulo {
+    background-color: black;
+    color: #405eff;
+    width: 1100px;
+}
+
+#titulo {
+    margin-top: 75px;
+}
+</style>
+<div class="container" style="background:none;" id="titulo">
+    <div class="jumbotron" id="j_titulo" style="height:50px;">
+        <h1 style="margin: -40px auto;">Albunes</h1>
+    </div>
+    <!--cierra el jumbotron-->
+    <div class="row">
         <div class="row">
-            <div >
-                <div class="col-md-4" ng-repeat="albun in albunes">
-                    <div class="well" style="height:200px;width:200px;">
-                        <h2>{{albun.nombre}}</h2>
-                        <a href="#"><img src="" class="img-thumbnail" style="background:black;height:100px;width:100px;"></a>
-                        <h4>{{albun.anio}}</h4>
-                        <h4>{{albun.banda}}</h4>
+            <div class="col-sm-6 col-md-4" ng-repeat="albun in albunes">
+                <a href="#">
+                    <div class="thumbnail" style="width:300px;margin-left:17px;background:black;">
+                        <div class="caption" style="color:white;font-size:20px;text-align:center;">
+                            <h3>{{albun.nombre}}</h3>
+                            <img src="" alt="una pelicula" style="width:250px;height:250px;margin-top:10px;">
+                            <p>{{albun.anio}}</p>
+                            <p>{{albun.banda}}</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
+    <!--row-->
 </div>
+<!--containe-->
